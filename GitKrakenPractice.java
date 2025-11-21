@@ -10,11 +10,17 @@ public class GitKrakenPractice
 		{
 			threads[i] = new MyThread();
 			totals[i] = threads[i].getSum();
+			try{
+				threads[i].join();
+			}
+			catch(InterruptedException e){
+				System.err.println(e);
+			}
 		}
 	}
 }
 
-class MyThread implements Runnable
+class MyThread extends Thread
 {
 	private int sum;
 
