@@ -17,6 +17,12 @@ public class GitKrakenPractice
 				System.err.println(e);
 			}
 		}
+
+		int finalTotal = 0;
+		for(int i: totals)
+		{
+			finalTotal += i;
+		}
 	}
 }
 
